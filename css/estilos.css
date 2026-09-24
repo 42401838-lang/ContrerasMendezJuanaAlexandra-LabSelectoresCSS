@@ -1,0 +1,117 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: darkblue;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.destacado {
+    font-weight: 700;
+    color: red;
+}
+
+#encabezado {
+    background-color: aqua;
+}
+
+/* Tipo de selector: Descendiente
+   Elementos que selecciona: Los enlaces que están dentro de nav.
+   ¿Por qué se utilizó este selector?
+   Porque permite modificar solamente los enlaces del menú sin afectar otros enlaces.
+*/
+
+nav a {
+    color: #17365d;
+}
+
+/* Tipo de selector: Hijo directo
+   Elementos que selecciona: Los párrafos que son hijos directos de article.
+   ¿Por qué se utilizó este selector?
+   Porque permite seleccionar solo los párrafos que están directamente dentro de article.
+*/
+
+article>p {
+    color: #2f5597;
+}
+
+/* Tipo de selector: Hermano adyacente
+   Elementos que selecciona: El primer párrafo que aparece inmediatamente después de un h2.
+   ¿Por qué se utilizó este selector?
+   Porque permite seleccionar solamente el párrafo que está justo después de un h2.
+*/
+h2+p {
+    color: coral;
+}
+
+/* Tipo de selector: Hermanos posteriores
+   Elementos que selecciona: Todos los párrafos que aparecen después de un h2 y comparten el mismo padre.
+   ¿Por qué se utilizó este selector?
+   Porque permite seleccionar todos los párrafos posteriores al h2 sin afectar otros elementos.
+*/
+h2~p {
+    color: green;
+}
+
+[disabled] {
+    opacity: 0.5;
+}
+
+/* Tipo de selector: Atributo
+   Elementos que selecciona: El input que tiene el atributo type con valor email.
+   ¿Por qué se utilizó este selector?
+   Porque permite identificar solamente el campo de correo electrónico sin agregar una clase nueva.
+*/
+input[type="email"] {
+    border: 2px solid blue;
+}
+
+a[target="_blank"] {
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration-thickness: 3px;
+}
+
+/* Tipo de selector: Pseudoclase
+   Elementos que selecciona: Los campos input cuando reciben el foco.
+   ¿Por qué se utilizó este selector?
+   Porque permite mostrar visualmente qué campo está seleccionado al hacer clic o usar la tecla Tab.
+*/
+input:focus {
+    outline: 3px solid darkblue;
+}
+
+/* Tipo de selector: Pseudoclase
+   Elementos que selecciona: El botón que se encuentra deshabilitado.
+   ¿Por qué se utilizó este selector?
+   Porque permite cambiar la apariencia del botón cuando está en estado deshabilitado.
+*/
+button:disabled {
+    background-color: yellowgreen;
+    cursor: not-allowed;
+}
+
+.recursos li:nth-child(odd) {
+    background-color: lightgray;
+}
+
+.presentacion p::first-letter {
+    font-size: 2em;
+}
+
+/* Tipo de selector: Pseudoelemento
+   Elementos que selecciona: El contenido antes del texto del elemento con clase importante.
+   ¿Por qué se utilizó este selector?
+   Porque permite agregar contenido antes del texto sin modificar el HTML.
+*/
+.importante::before {
+    content: "Aviso: ";
+    font-weight: bold;
+}
